@@ -17,10 +17,18 @@ function onClick() {
   function updateLabel() {
     var digit1 = getNumber1();
     var digit2 = getNumber2();
-    var sum = parseInt(digit1) + parseInt(digit2);
-    label.textContent = `${digit1} + ${digit2}  =  ${sum}`;
+   
+    if(button.value === 'Add'){
+        var sum = parseInt(digit1) + parseInt(digit2);
+        label.textContent = `${digit1} + ${digit2}  =  ${sum}`;
+    }
+    else{
+        var sum = parseInt(digit1) - parseInt(digit2);
+        label.textContent = `${digit1} - ${digit2}  =  ${sum}`;
+    }
+
   }
-  
+
   function getNumber1() {
     return inputs[0].value;
   }
